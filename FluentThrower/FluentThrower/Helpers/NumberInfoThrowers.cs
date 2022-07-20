@@ -6,12 +6,12 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rem.Core.Utilities.FluentThrowerHelpers;
+namespace Rem.Core.Utilities.FluentThrower.Helpers;
 
 /// <summary>
 /// Helper methods for throwing exceptions using <see cref="INumberInfo{T}"/> instances.
 /// </summary>
-public static class NumberInfoThrowHelpers
+public static class NumberInfoThrowers
 {
     #region Arguments
     /// <summary>
@@ -271,7 +271,7 @@ public static class NumberInfoThrowHelpers
 /// <summary>
 /// Helper methods for throwing exceptions using <see cref="IFloatInfo{T}"/> instances.
 /// </summary>
-public static class FloatInfoThrowHelpers
+public static class FloatInfoThrowers
 {
     #region Arguments
     /// <summary>

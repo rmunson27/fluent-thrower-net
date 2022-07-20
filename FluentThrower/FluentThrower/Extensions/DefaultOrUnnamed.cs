@@ -1,6 +1,5 @@
 ﻿using Rem.Core.Attributes;
 using Rem.Core.ComponentModel;
-using Rem.Core.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -9,7 +8,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace Rem.Core.Utilities.FluentThrowerExtensions;
+namespace Rem.Core.Utilities.FluentThrower.Extensions;
 
 /// <summary>
 /// A series of extension methods offering a simple fluent API for throwing exceptions relating to invalid default
@@ -37,7 +36,7 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [return: NonDefaultableStruct]
     public static TStruct IfStructArgDefault<TStruct>(
-        this IDefaultOrUnnamedFluentThrower _, in TStruct argValue, string argName, string? message = null)
+        this IDefaultOrUnnamedThrower _, in TStruct argValue, string argName, string? message = null)
         where TStruct : struct, IDefaultableStruct
         => argValue.IsDefault ? throw StructArgDefault(argName, message) : argValue;
 
@@ -60,7 +59,7 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [return: NotDefault]
     public static ImmutableArray<T> IfStructArgDefault<T>(
-        this IDefaultOrUnnamedFluentThrower _, in ImmutableArray<T> argValue, string argName, string? message = null)
+        this IDefaultOrUnnamedThrower _, in ImmutableArray<T> argValue, string argName, string? message = null)
         => argValue.IsDefault
             ? throw new StructArgumentDefaultException(
                 argName, message ?? "Immutable array argument was default.")
@@ -85,7 +84,7 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [return: NotDefault]
     public static TStruct IfStructPropSetDefault<TStruct>(
-        this IDefaultOrUnnamedFluentThrower _,
+        this IDefaultOrUnnamedThrower _,
         in TStruct propSetValue, [CallerMemberName] string? propName = null, string? message = null)
         where TStruct : struct, IDefaultableStruct
         => propSetValue.IsDefault ? throw StructPropSetDefault(propName!, message) : propSetValue;
@@ -109,7 +108,7 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [return: NotDefault]
     public static ImmutableArray<T> IfStructPropSetDefault<T>(
-        this IDefaultOrUnnamedFluentThrower _,
+        this IDefaultOrUnnamedThrower _,
         in ImmutableArray<T> propSetValue, [CallerMemberName] string? propName = null, string? message = null)
         => propSetValue.IsDefault ? throw StructPropSetDefault(propName!, message) : propSetValue;
     #endregion
@@ -134,7 +133,7 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [return: NamedEnum]
     public static TEnum IfEnumArgUnnamed<TEnum>(
-        this IDefaultOrUnnamedFluentThrower _, TEnum argValue, string argName, string? message = null)
+        this IDefaultOrUnnamedThrower _, TEnum argValue, string argName, string? message = null)
         where TEnum : struct, Enum
         => Enums.IsDefined(argValue)
             ? argValue
@@ -163,7 +162,7 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [return: NamedEnum]
     public static TEnum? IfEnumArgUnnamed<TEnum>(
-        this IDefaultOrUnnamedFluentThrower _, TEnum? argValue, string argName, string? message = null)
+        this IDefaultOrUnnamedThrower _, TEnum? argValue, string argName, string? message = null)
         where TEnum : struct, Enum
     {
         if (argValue is TEnum actualEnumValue)
@@ -197,7 +196,7 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [return: NamedEnum]
     public static TEnum IfEnumPropSetUnnamed<TEnum>(
-        this IDefaultOrUnnamedFluentThrower _,
+        this IDefaultOrUnnamedThrower _,
         TEnum propSetValue, [CallerMemberName] string? propName = null, string? message = null)
         where TEnum : struct, Enum
         => Enums.IsDefined(propSetValue)
@@ -226,7 +225,7 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [return: NamedEnum]
     public static TEnum? IfEnumPropSetUnnamed<TEnum>(
-        this IDefaultOrUnnamedFluentThrower _,
+        this IDefaultOrUnnamedThrower _,
         TEnum? propSetValue, [CallerMemberName] string? propName = null, string? message = null)
         where TEnum : struct, Enum
     {
@@ -260,7 +259,7 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [return: NotNull]
     public static T IfArgNull<T>(
-        this IDefaultOrUnnamedFluentThrower _, T argValue, string argName, string? message = null)
+        this IDefaultOrUnnamedThrower _, T argValue, string argName, string? message = null)
     {
         if (argValue is null)
         {
@@ -286,7 +285,7 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [return: NotNull]
     public static T IfPropSetNull<T>(
-        this IDefaultOrUnnamedFluentThrower _,
+        this IDefaultOrUnnamedThrower _,
         T propSetValue, [CallerMemberName] string? propName = null, string? message = null)
     {
         if (propSetValue is null)

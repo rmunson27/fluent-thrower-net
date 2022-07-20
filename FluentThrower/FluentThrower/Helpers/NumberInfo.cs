@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rem.Core.Utilities.FluentThrowerHelpers;
+namespace Rem.Core.Utilities.FluentThrower.Helpers;
 
 #region Interface Implementations
 /// <summary>

@@ -3,10 +3,10 @@
 	<PropertyGroup Label="Identity">
 		<Product>Rem.Core.Utilities.FluentThrower</Product>
 		<PackageId>Rem.Core.Utilities.FluentThrower</PackageId>
-		<RootNamespace>Rem.Core.Utilities</RootNamespace>
+		<RootNamespace>Rem.Core.Utilities.FluentThrower</RootNamespace>
 		<Version>1.0</Version>
 		<Description>
-			Provides the Rem.Core.Utilities.FluentThrower class, which offers a simple fluent exception-throwing API, and the Rem.Core.Utilities.FluentThrowerExtensions namespace, which provides the functionality for the fluent thrower class via extension methods.
+			Provides a simple, fluent, extensible exception-throwing API, with functionality provided by extension methods on interface implementations.
 		</Description>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Authors>Richard E. Munson</Authors>

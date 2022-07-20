@@ -1,5 +1,5 @@
 ﻿using Rem.Core.ComponentModel;
-using Rem.Core.Utilities;
+using Rem.Core.Utilities.FluentThrower;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rem.CoreTest.Utilities;
+namespace Rem.CoreTest.Utilities.FluentThrower;
 
 /// <summary>
 /// A basic test that the library works.
@@ -18,8 +18,8 @@ public class Test
 {
     #region NumericRange
     /// <summary>
-    /// Tests the extension methods available to the <see cref="INumericRangeFluentThrower"/> interface implemented
-    /// by the <see cref="FluentThrower"/> class.
+    /// Tests the extension methods available to the <see cref="INumericRangeThrower"/> interface implemented
+    /// by the <see cref="Thrower"/> class.
     /// </summary>
     [TestMethod]
     public void TestNumericRange()
@@ -34,9 +34,9 @@ public class Test
     #region DefaultOrUnnamed
     /// <summary>
     /// Tests the <see langword="enum"/> extension methods available to the
-    /// <see cref="IDefaultOrUnnamedFluentThrower"/> interface implemented by the <see cref="FluentThrower"/> class.
+    /// <see cref="IDefaultOrUnnamedThrower"/> interface implemented by the <see cref="Thrower"/> class.
     /// </summary>
-    [TestMethod, TestCategory(nameof(IDefaultOrUnnamedFluentThrower))]
+    [TestMethod, TestCategory(nameof(IDefaultOrUnnamedThrower))]
     public void TestDefaultOrUnnamed_Enums()
     {
         Assert.ThrowsException<InvalidEnumArgumentException>(() => Throw.IfEnumArgUnnamed(UnnamedE, "enumVal"));
@@ -47,9 +47,9 @@ public class Test
 
     /// <summary>
     /// Tests the <see langword="struct"/> extension methods available to the
-    /// <see cref="IDefaultOrUnnamedFluentThrower"/> interface implemented by the <see cref="FluentThrower"/> class.
+    /// <see cref="IDefaultOrUnnamedThrower"/> interface implemented by the <see cref="Thrower"/> class.
     /// </summary>
-    [TestMethod, TestCategory(nameof(IDefaultOrUnnamedFluentThrower))]
+    [TestMethod, TestCategory(nameof(IDefaultOrUnnamedThrower))]
     public void TestDefaultOrUnnamed_Structs()
     {
         // General IDefaultableStruct implementations
@@ -69,10 +69,10 @@ public class Test
     }
 
     /// <summary>
-    /// Tests the nullability extension methods available to the <see cref="IDefaultOrUnnamedFluentThrower"/> interface
-    /// implemented by the <see cref="FluentThrower"/> class.
+    /// Tests the nullability extension methods available to the <see cref="IDefaultOrUnnamedThrower"/> interface
+    /// implemented by the <see cref="Thrower"/> class.
     /// </summary>
-    [TestMethod, TestCategory(nameof(IDefaultOrUnnamedFluentThrower))]
+    [TestMethod, TestCategory(nameof(IDefaultOrUnnamedThrower))]
     public void TestDefaultOrUnnamed_Null()
     {
         Assert.ThrowsException<ArgumentNullException>(() => Throw.IfArgNull(default(Version), "version"));
@@ -89,8 +89,8 @@ public class Test
 
     #region Comparison
     /// <summary>
-    /// Tests the extension methods available to the <see cref="IComparisonFluentThrower"/> interface implemented
-    /// by the <see cref="FluentThrower"/> class.
+    /// Tests the extension methods available to the <see cref="IComparisonThrower"/> interface implemented
+    /// by the <see cref="Thrower"/> class.
     /// </summary>
     [TestMethod]
     public void TestComparison()

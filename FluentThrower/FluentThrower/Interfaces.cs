@@ -4,21 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rem.Core.Utilities;
+namespace Rem.Core.Utilities.FluentThrower;
 
 /// <summary>
 /// Exposes an implementing type to fluent thrower extension methods relating to invalid default values or enum
 /// values.
 /// </summary>
-public interface IDefaultOrUnnamedFluentThrower { }
+public interface IDefaultOrUnnamedThrower { }
 
 /// <summary>
 /// Exposes an implementing type to fluent thrower extension methods relating to comparison results.
 /// </summary>
-public interface IComparisonFluentThrower { }
+public interface IComparisonThrower { }
 
 /// <summary>
 /// Exposes an implementing type to fluent thrower extension methods relating to numeric signs and ranges.
 /// </summary>
-public interface INumericRangeFluentThrower { }
+public interface INumericRangeThrower { }
 
