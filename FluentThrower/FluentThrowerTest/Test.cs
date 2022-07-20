@@ -99,6 +99,10 @@ public class Test
         Throw.IfArgGreaterThan(1, 1, "arg"); // Should not throw
         Assert.ThrowsException<PropertySetOutOfRangeException>(() => Throw.IfPropSetGreaterThan(1, 2, "Prop"));
         Throw.IfPropSetGreaterThan(1, 1, "Prop"); // Should not throw
+
+        Assert.ThrowsException<ArgumentOutOfRangeException>(
+            () => Throw.IfArgGreaterThan(new Version(1, 1), new Version(1, 2), "Version"));
+        Throw.IfArgGreaterThan(new Version(1, 1), new Version(1, 1), "Version"); // Should not throw
     }
     #endregion
 
