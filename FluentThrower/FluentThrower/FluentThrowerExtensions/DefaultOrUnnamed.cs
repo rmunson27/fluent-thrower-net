@@ -9,7 +9,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace Rem.CoreUtils.Exceptions.ThrowerExtensions;
+namespace Rem.Core.Utilities.FluentThrowerExtensions;
 
 /// <summary>
 /// A series of extension methods offering a simple fluent API for throwing exceptions relating to invalid default
