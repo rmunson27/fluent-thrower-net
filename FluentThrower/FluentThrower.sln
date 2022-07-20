@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentThrower", "FluentThrower\FluentThrower.csproj", "{A63DA5D4-D517-44C2-9ECE-3CD8CF4192F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentThrowerTest", "FluentThrowerTest\FluentThrowerTest.csproj", "{0779BEEB-ABD8-4DEB-BCF1-A60A6834F557}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A63DA5D4-D517-44C2-9ECE-3CD8CF4192F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A63DA5D4-D517-44C2-9ECE-3CD8CF4192F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A63DA5D4-D517-44C2-9ECE-3CD8CF4192F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0779BEEB-ABD8-4DEB-BCF1-A60A6834F557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0779BEEB-ABD8-4DEB-BCF1-A60A6834F557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0779BEEB-ABD8-4DEB-BCF1-A60A6834F557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0779BEEB-ABD8-4DEB-BCF1-A60A6834F557}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
