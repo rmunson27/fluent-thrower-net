@@ -83,6 +83,28 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
         in TStruct propSetValue, [CallerMemberName] string? propName = null, string? message = null)
         where TStruct : struct, IDefaultableStruct
         => propSetValue.IsDefault ? throw StructPropSetDefault(propName!, message) : propSetValue;
+
+    /// <summary>
+    /// Throws a <see cref="StructPropertySetDefaultException"/> if the property set value passed in is the
+    /// default value of type <typeparamref name="TStruct"/>.
+    /// </summary>
+    /// <typeparam name="TStruct"></typeparam>
+    /// <param name="propSetValue">The value the property is being set to.</param>
+    /// <param name="propName">The name of the property.</param>
+    /// <param name="message">
+    /// An optional error message to construct an exception with, or <see langword="null"/> to use a
+    /// default message.
+    /// </param>
+    /// <returns>The value passed in.</returns>
+    /// <exception cref="StructPropertySetDefaultException">
+    /// <paramref name="propSetValue"/> was the default value of type <typeparamref name="TStruct"/>.
+    /// </exception>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    [return: NotDefault]
+    public static ImmutableArray<T> IfStructPropSetDefault<T>(
+        this IDefaultOrUnnamedFluentThrower _,
+        in ImmutableArray<T> propSetValue, [CallerMemberName] string? propName = null, string? message = null)
+        => propSetValue.IsDefault ? throw StructPropSetDefault(propName!, message) : propSetValue;
     #endregion
 
     #region Enums
