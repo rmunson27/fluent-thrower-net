@@ -13,8 +13,8 @@ namespace Rem.Core.Utilities;
 /// <para>
 /// This class is mainly intended to offer a less verbose way of throwing exceptions in cases that commonly arise
 /// in code.
-/// It has no functionality of its own; rather, the <see cref="ThrowerExtensions"/> namespace contains basic extension
-/// methods providing the functionality, so that users can extend the functionality by providing their own
+/// It has no functionality of its own; rather, the <see cref="FluentThrowerExtensions"/> namespace contains basic
+/// extension methods providing the functionality, so that users can extend the functionality by providing their own
 /// extension methods.
 /// </para>
 /// 
@@ -26,9 +26,9 @@ namespace Rem.Core.Utilities;
 /// 
 /// <para>
 /// Instances of the type can be used to throw exceptions as follows (assuming the contents of the
-/// <see cref="ThrowerExtensions"/> namespace have been properly imported):
+/// <see cref="FluentThrowerExtensions"/> namespace have been properly imported):
 /// <code>
-/// <see langword="var"/> throw = <see cref="Throw"/>;
+/// <see langword="var"/> throw = <see langword="new"/> <see cref="FluentThrower"/>();
 /// throw.IfArgNull(arg, <see langword="nameof"/>(arg)); // Will throw an ArgumentNullException if arg is null
 /// </code>
 /// 

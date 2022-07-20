@@ -19,6 +19,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -36,6 +37,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -57,6 +59,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -75,6 +78,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is non-positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -94,6 +98,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -111,6 +116,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is non-negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -129,6 +135,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -146,6 +153,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -165,6 +173,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is non-positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -184,6 +193,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -202,6 +212,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is non-negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -221,6 +232,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -242,6 +254,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -260,6 +273,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is non-positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -279,6 +293,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -296,6 +311,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is non-negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -314,6 +330,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -331,6 +348,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -350,6 +368,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is non-positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -369,6 +388,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -387,6 +407,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is non-negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -406,6 +427,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -427,6 +449,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -445,6 +468,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -465,6 +489,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -483,6 +508,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is non-positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -501,6 +527,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -518,6 +545,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is non-negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -535,6 +563,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -552,6 +581,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -571,6 +601,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is non-positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -590,6 +621,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -607,6 +639,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is non-negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -626,6 +659,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -647,6 +681,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -664,6 +699,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -683,6 +719,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -701,6 +738,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is non-positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -719,6 +757,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -736,6 +775,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is non-negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -753,6 +793,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -770,6 +811,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -789,6 +831,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is non-positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -808,6 +851,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -826,6 +870,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is non-negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -845,6 +890,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -866,6 +912,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -883,6 +930,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -903,6 +951,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -921,6 +970,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is non-positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -940,6 +990,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -957,6 +1008,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is non-negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -975,6 +1027,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -992,6 +1045,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is not finite.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1010,6 +1064,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is not a number
     /// (<see cref="float.NaN"/>).
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1028,6 +1083,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1047,6 +1103,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is non-positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1066,6 +1123,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1084,6 +1142,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is non-negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1103,6 +1162,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1122,6 +1182,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is not finite.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1141,6 +1202,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the argument value passed in is not a number
     /// (<see cref="float.NaN"/>).
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1162,6 +1224,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1180,6 +1243,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is non-positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1199,6 +1263,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1216,6 +1281,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is non-negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1234,6 +1300,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1251,6 +1318,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is not finite.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1270,6 +1338,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is not a number
     /// (<see cref="double.NaN"/>).
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1288,6 +1357,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1307,6 +1377,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is non-positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1326,6 +1397,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1344,6 +1416,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is non-negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1363,6 +1436,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1382,6 +1456,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is not finite.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1401,6 +1476,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the argument value passed in is not a number
     /// (<see cref="double.NaN"/>).
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1422,6 +1498,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1441,6 +1518,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is non-positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1460,6 +1538,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1478,6 +1557,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is non-negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1496,6 +1576,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1514,6 +1595,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1533,6 +1615,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is non-positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1552,6 +1635,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1570,6 +1654,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is non-negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1589,6 +1674,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1610,6 +1696,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1629,6 +1716,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is non-positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1648,6 +1736,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1666,6 +1755,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is non-negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1684,6 +1774,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -1702,6 +1793,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1721,6 +1813,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is non-positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1740,6 +1833,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is zero.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1758,6 +1852,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is non-negative.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -1777,6 +1872,7 @@ public static class NumericRangeFluentThrowerExtensions
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is positive.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">

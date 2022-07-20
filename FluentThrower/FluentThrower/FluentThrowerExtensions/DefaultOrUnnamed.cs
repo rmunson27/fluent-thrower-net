@@ -23,6 +23,7 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     /// value of type <typeparamref name="TStruct"/>.
     /// </summary>
     /// <typeparam name="TStruct"></typeparam>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -44,6 +45,8 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     /// Throws a <see cref="StructArgumentDefaultException"/> if the <see cref="ImmutableArray{T}"/> argument value
     /// passed in is the default.
     /// </summary>
+    /// <typeparam name="T">The type of the <see cref="ImmutableArray{T}"/>.</typeparam>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -51,7 +54,9 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     /// default message.
     /// </param>
     /// <returns>The value passed in.</returns>
-    /// <exception cref="StructArgumentDefaultException"><paramref name="argValue"/> was the default.</exception>
+    /// <exception cref="StructArgumentDefaultException">
+    /// <paramref name="argValue"/> was the default value of type <see cref="ImmutableArray{T}"/>.
+    /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [return: NotDefault]
     public static ImmutableArray<T> IfStructArgDefault<T>(
@@ -66,6 +71,7 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     /// default value of type <typeparamref name="TStruct"/>.
     /// </summary>
     /// <typeparam name="TStruct"></typeparam>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -85,10 +91,11 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
         => propSetValue.IsDefault ? throw StructPropSetDefault(propName!, message) : propSetValue;
 
     /// <summary>
-    /// Throws a <see cref="StructPropertySetDefaultException"/> if the property set value passed in is the
-    /// default value of type <typeparamref name="TStruct"/>.
+    /// Throws a <see cref="StructPropertySetDefaultException"/> if the <see cref="ImmutableArray{T}"/> property set
+    /// value passed in was the default.
     /// </summary>
-    /// <typeparam name="TStruct"></typeparam>
+    /// <typeparam name="T">The type of the <see cref="ImmutableArray{T}"/>.</typeparam>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">
@@ -97,7 +104,7 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     /// </param>
     /// <returns>The value passed in.</returns>
     /// <exception cref="StructPropertySetDefaultException">
-    /// <paramref name="propSetValue"/> was the default value of type <typeparamref name="TStruct"/>.
+    /// <paramref name="propSetValue"/> was the default value of type <see cref="ImmutableArray{T}"/>.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [return: NotDefault]
@@ -113,6 +120,7 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     /// value of type <typeparamref name="TEnum"/>.
     /// </summary>
     /// <typeparam name="TEnum"></typeparam>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -140,6 +148,7 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     /// <see langword="null"/> or a named, defined value of type <typeparamref name="TEnum"/>.
     /// </summary>
     /// <typeparam name="TEnum"></typeparam>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -175,8 +184,12 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     /// named, defined value of type <typeparamref name="TEnum"/>.
     /// </summary>
     /// <typeparam name="TEnum"></typeparam>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
+    /// <param name="message">
+    /// An optional message to construct the exception with, or <see langword="null"/> to use a default message.
+    /// </param>
     /// <returns>The value passed in.</returns>
     /// <exception cref="InvalidEnumPropertySetException">
     /// <paramref name="propSetValue"/> was not a named, defined value of type <typeparamref name="TEnum"/>.
@@ -199,8 +212,12 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     /// <see langword="null"/> or a named, defined value of type <typeparamref name="TEnum"/>.
     /// </summary>
     /// <typeparam name="TEnum"></typeparam>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
+    /// <param name="message">
+    /// An optional message to construct the exception with, or <see langword="null"/> to use a default message.
+    /// </param>
     /// <returns>The value passed in.</returns>
     /// <exception cref="InvalidEnumPropertySetException">
     /// <paramref name="propSetValue"/> was not either <see langword="null"/> or a named, defined value of
@@ -232,6 +249,7 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     /// Throws an <see cref="ArgumentNullException"/> if the argument value passed in is <see langword="null"/>.
     /// </summary>
     /// <typeparam name="T"></typeparam>
+    /// <param name="_"></param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
     /// <param name="message">
@@ -257,6 +275,7 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     /// is <see langword="null"/>.
     /// </summary>
     /// <typeparam name="T"></typeparam>
+    /// <param name="_"></param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
     /// <param name="message">

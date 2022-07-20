@@ -15,6 +15,7 @@ public static class ComparisonFluentThrowerExtensions
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is greater than the maximum
     /// value passed in.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="max">The maximum value to check against.</param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
@@ -40,6 +41,7 @@ public static class ComparisonFluentThrowerExtensions
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is greater than or equal
     /// to the maximum value passed in.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="max">The maximum value to check against.</param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
@@ -65,6 +67,7 @@ public static class ComparisonFluentThrowerExtensions
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is less than or equal
     /// to the minimum value passed in.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="min">The minimum value to check against.</param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
@@ -90,6 +93,7 @@ public static class ComparisonFluentThrowerExtensions
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is less than the minimum
     /// value passed in.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="min">The minimum value to check against.</param>
     /// <param name="argValue">The value of the argument.</param>
     /// <param name="argName">The name of the argument.</param>
@@ -115,6 +119,7 @@ public static class ComparisonFluentThrowerExtensions
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is greater than the
     /// maximum value passed in.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="max">The maximum value to check against.</param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
@@ -141,6 +146,7 @@ public static class ComparisonFluentThrowerExtensions
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is greater than or
     /// equal to the maximum value passed in.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="max">The maximum value to check against.</param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
@@ -167,6 +173,7 @@ public static class ComparisonFluentThrowerExtensions
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is less than or equal
     /// to the minimum value passed in.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="min">The minimum value to check against.</param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
@@ -193,6 +200,7 @@ public static class ComparisonFluentThrowerExtensions
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is less than the
     /// minimum value passed in.
     /// </summary>
+    /// <param name="_"></param>
     /// <param name="min">The minimum value to check against.</param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property.</param>
