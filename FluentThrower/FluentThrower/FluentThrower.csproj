@@ -6,9 +6,7 @@
 		<RootNamespace>Rem.Core.Utilities</RootNamespace>
 		<Version>1.0</Version>
 		<Description>
-			Provides the Rem.Core.Utilities.FluentThrower class, which offers a simple fluent exception-throwing API,
-			and the Rem.Core.Utilities.FluentThrowerExtensions namespace, which provides the functionality for the
-			fluent thrower class via extension methods.
+			Provides the Rem.Core.Utilities.FluentThrower class, which offers a simple fluent exception-throwing API, and the Rem.Core.Utilities.FluentThrowerExtensions namespace, which provides the functionality for the fluent thrower class via extension methods.
 		</Description>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Authors>Richard E. Munson</Authors>
