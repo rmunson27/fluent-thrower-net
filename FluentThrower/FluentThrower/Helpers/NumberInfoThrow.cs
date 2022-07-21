@@ -18,6 +18,9 @@ public static class NumberInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="paramValue">The value of the parameter to test.</param>
     /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
@@ -38,6 +41,9 @@ public static class NumberInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
@@ -65,7 +71,9 @@ public static class SignInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    /// <param name="info"></param>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="paramValue">The value of the parameter to test.</param>
     /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
@@ -86,7 +94,9 @@ public static class SignInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    /// <param name="info"></param>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="paramValue">The value of the parameter to test.</param>
     /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
@@ -107,7 +117,9 @@ public static class SignInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    /// <param name="info"></param>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="paramValue">The value of the parameter to test.</param>
     /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
@@ -128,7 +140,9 @@ public static class SignInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    /// <param name="info"></param>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="paramValue">The value of the parameter to test.</param>
     /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
@@ -151,7 +165,9 @@ public static class SignInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    /// <param name="info"></param>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
@@ -172,7 +188,9 @@ public static class SignInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    /// <param name="info"></param>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
@@ -193,7 +211,9 @@ public static class SignInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    /// <param name="info"></param>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
@@ -214,7 +234,9 @@ public static class SignInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    /// <param name="info"></param>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
@@ -242,6 +264,9 @@ public static class FiniteInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
@@ -263,6 +288,9 @@ public static class FiniteInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="paramValue">The value of the parameter to test.</param>
     /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
@@ -312,7 +340,9 @@ public static class NaNValueInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    /// <param name="info"></param>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="paramValue">The value of the parameter to test.</param>
     /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
@@ -333,7 +363,9 @@ public static class NaNValueInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    /// <param name="info"></param>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="paramValue">The value of the parameter to test.</param>
     /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
@@ -354,7 +386,9 @@ public static class NaNValueInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    /// <param name="info"></param>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="paramValue">The value of the parameter to test.</param>
     /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">An optional message, or <see langword="null"/> to use a default message.</param>
@@ -375,7 +409,9 @@ public static class NaNValueInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    /// <param name="info"></param>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="paramValue">The value of the parameter to test.</param>
     /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
@@ -399,7 +435,9 @@ public static class NaNValueInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    /// <param name="info"></param>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property to test.</param>
     /// <param name="message">An optional message, or <see langword="null"/> to use a default message.</param>
@@ -420,7 +458,9 @@ public static class NaNValueInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    /// <param name="info"></param>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
@@ -441,7 +481,9 @@ public static class NaNValueInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    /// <param name="info"></param>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
@@ -462,7 +504,9 @@ public static class NaNValueInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    /// <param name="info"></param>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property to test.</param>
     /// <param name="message">An optional message, or <see langword="null"/> to use a default message.</param>
@@ -483,7 +527,9 @@ public static class NaNValueInfoThrow
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    /// <param name="info"></param>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
     /// <param name="propSetValue">The value the property is being set to.</param>
     /// <param name="propName">The name of the property to test.</param>
     /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
