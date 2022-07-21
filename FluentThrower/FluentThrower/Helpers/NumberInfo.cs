@@ -371,6 +371,10 @@ public static class NumberInfo
 /// <summary>
 /// An interface for types that can provide info about instances of a given numeric type.
 /// </summary>
+/// <remarks>
+/// This interface can be implemented as necessary in order to provide a way to describe details about numeric types
+/// that may not implement a common interface.
+/// </remarks>
 /// <typeparam name="T"></typeparam>
 public interface INumberInfo<T>
 {
@@ -418,10 +422,10 @@ public interface IFiniteInfo<T> : INumberInfo<T>
 }
 
 /// <summary>
-/// An interface for types that can provide sign and finiteness info for a given float type.
+/// An interface for types that can provide sign info for a given numeric type that has a not-a-number (NaN) value.
 /// </summary>
 /// <typeparam name="T"></typeparam>
-public interface IFloatInfo<T> : IFiniteInfo<T>, INumberInfo<T>
+public interface INaNValueInfo<T> : INumberInfo<T>
 {
     /// <summary>
     /// Gets the sign of the supplied value, or <see langword="null"/> if the supplied value is NaN.
@@ -437,4 +441,10 @@ public interface IFloatInfo<T> : IFiniteInfo<T>, INumberInfo<T>
     /// <returns></returns>
     public bool IsNaN(T value);
 }
+
+/// <summary>
+/// An interface for types that can provide sign and finiteness info for a given float type.
+/// </summary>
+/// <typeparam name="T"></typeparam>
+public interface IFloatInfo<T> : IFiniteInfo<T>, INaNValueInfo<T> { }
 #endregion
