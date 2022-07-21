@@ -13,6 +13,52 @@ namespace Rem.Core.Utilities.FluentThrower.Helpers;
 /// </summary>
 public static class NumberInfoThrow
 {
+    /// <summary>
+    /// Throws an exception if the argument value passed in is zero.
+    /// </summary>
+    /// <typeparam name="TInfo"></typeparam>
+    /// <typeparam name="TValue"></typeparam>
+    /// <param name="paramValue">The value of the parameter to test.</param>
+    /// <param name="paramName">The name of the parameter to test.</param>
+    /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
+    /// <returns><paramref name="paramValue"/></returns>
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// <paramref name="paramValue"/> was zero.
+    /// </exception>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TValue IfArgZero<TInfo, TValue>(
+        TInfo info, TValue paramValue, string paramName, string? message)
+        where TInfo : INumberInfo<TValue>
+        => info.IsZero(paramValue)
+            ? throw new ArgumentOutOfRangeException(paramName, message ?? "Value cannot be zero.")
+            : paramValue;
+
+    /// <summary>
+    /// Throws an exception if the property set value passed in is zero.
+    /// </summary>
+    /// <typeparam name="TInfo"></typeparam>
+    /// <typeparam name="TValue"></typeparam>
+    /// <param name="propSetValue">The value the property is being set to.</param>
+    /// <param name="propName">The name of the property to test.</param>
+    /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
+    /// <returns><paramref name="propSetValue"/></returns>
+    /// <exception cref="PropertySetOutOfRangeException">
+    /// <paramref name="propSetValue"/> was zero.
+    /// </exception>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TValue IfPropSetZero<TInfo, TValue>(
+        TInfo info, TValue propSetValue, string propName, string? message)
+        where TInfo : INumberInfo<TValue>
+        => info.IsZero(propSetValue)
+            ? throw new PropertySetOutOfRangeException(message ?? "Value cannot be zero.", propName, propSetValue)
+            : propSetValue;
+}
+
+/// <summary>
+/// Provides functionality for throwing numeric range exceptions using generic <see cref="ISignInfo{T}"/> instances.
+/// </summary>
+public static class SignInfoThrow
+{
     #region Arguments
     /// <summary>
     /// Throws an exception if the argument value passed in is negative.
@@ -57,26 +103,6 @@ public static class NumberInfoThrow
             : paramValue;
 
     /// <summary>
-    /// Throws an exception if the argument value passed in is zero.
-    /// </summary>
-    /// <typeparam name="TInfo"></typeparam>
-    /// <typeparam name="TValue"></typeparam>
-    /// <param name="paramValue">The value of the parameter to test.</param>
-    /// <param name="paramName">The name of the parameter to test.</param>
-    /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
-    /// <returns><paramref name="paramValue"/></returns>
-    /// <exception cref="ArgumentOutOfRangeException">
-    /// <paramref name="paramValue"/> was zero.
-    /// </exception>
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue IfArgZero<TInfo, TValue>(
-        TInfo info, TValue paramValue, string paramName, string? message)
-        where TInfo : INumberInfo<TValue>
-        => info.IsZero(paramValue)
-            ? throw new ArgumentOutOfRangeException(paramName, message ?? "Value cannot be zero.")
-            : paramValue;
-
-    /// <summary>
     /// Throws an exception if the argument value passed in is not negative.
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
@@ -117,27 +143,6 @@ public static class NumberInfoThrow
         => info.Sign(paramValue) > 0
             ? throw new ArgumentOutOfRangeException(paramName, paramValue, message ?? "Value cannot be positive.")
             : paramValue;
-
-    /// <summary>
-    /// Throws an exception if the argument value passed in is not finite.
-    /// </summary>
-    /// <typeparam name="TInfo"></typeparam>
-    /// <typeparam name="TValue"></typeparam>
-    /// <param name="paramValue">The value of the parameter to test.</param>
-    /// <param name="paramName">The name of the parameter to test.</param>
-    /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
-    /// <returns><paramref name="paramValue"/></returns>
-    /// <exception cref="ArgumentOutOfRangeException">
-    /// <paramref name="paramValue"/> was not finite.
-    /// </exception>
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue IfArgNotFinite<TInfo, TValue>(
-        TInfo info, TValue paramValue, string paramName, string? message)
-        where TInfo : IFiniteInfo<TValue>
-        => info.IsFinite(paramValue)
-            ? paramValue
-            : throw new ArgumentOutOfRangeException(
-                paramName, paramValue, message ?? "Infinite values are not permitted.");
     #endregion
 
     #region Properties
@@ -184,26 +189,6 @@ public static class NumberInfoThrow
             : propSetValue;
 
     /// <summary>
-    /// Throws an exception if the property set value passed in is zero.
-    /// </summary>
-    /// <typeparam name="TInfo"></typeparam>
-    /// <typeparam name="TValue"></typeparam>
-    /// <param name="propSetValue">The value the property is being set to.</param>
-    /// <param name="propName">The name of the property to test.</param>
-    /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
-    /// <returns><paramref name="propSetValue"/></returns>
-    /// <exception cref="PropertySetOutOfRangeException">
-    /// <paramref name="propSetValue"/> was zero.
-    /// </exception>
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue IfPropSetZero<TInfo, TValue>(
-        TInfo info, TValue propSetValue, string propName, string? message)
-        where TInfo : INumberInfo<TValue>
-        => info.IsZero(propSetValue)
-            ? throw new PropertySetOutOfRangeException(message ?? "Value cannot be zero.", propName, propSetValue)
-            : propSetValue;
-
-    /// <summary>
     /// Throws an exception if the property set value passed in is not negative.
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
@@ -244,7 +229,14 @@ public static class NumberInfoThrow
         => info.Sign(propSetValue) > 0
             ? throw new PropertySetOutOfRangeException(message ?? "Value cannot be positive.", propName, propSetValue)
             : propSetValue;
+    #endregion
+}
 
+/// <summary>
+/// Provides functionality for throwing numeric range exceptions using generic <see cref="IFiniteInfo{T}"/> instances.
+/// </summary>
+public static class FiniteInfoThrow
+{
     /// <summary>
     /// Throws an exception if the property set value passed in is not finite.
     /// </summary>
@@ -265,13 +257,33 @@ public static class NumberInfoThrow
             ? propSetValue
             : throw new PropertySetOutOfRangeException(
                 propName, message ?? "Non-finite values are not permitted.", propSetValue);
-    #endregion
+
+    /// <summary>
+    /// Throws an exception if the argument value passed in is not finite.
+    /// </summary>
+    /// <typeparam name="TInfo"></typeparam>
+    /// <typeparam name="TValue"></typeparam>
+    /// <param name="paramValue">The value of the parameter to test.</param>
+    /// <param name="paramName">The name of the parameter to test.</param>
+    /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
+    /// <returns><paramref name="paramValue"/></returns>
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// <paramref name="paramValue"/> was not finite.
+    /// </exception>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TValue IfArgNotFinite<TInfo, TValue>(
+        TInfo info, TValue paramValue, string paramName, string? message)
+        where TInfo : IFiniteInfo<TValue>
+        => info.IsFinite(paramValue)
+            ? paramValue
+            : throw new ArgumentOutOfRangeException(
+                paramName, paramValue, message ?? "Infinite values are not permitted.");
 }
 
 /// <summary>
-/// Provides functionality for throwing numeric range exceptions using generic <see cref="IFloatInfo{T}"/> instances.
+/// Provides functionality for throwing numeric range exceptions using generic <see cref="INaNValueInfo{T}"/> instances.
 /// </summary>
-public static class FloatInfoThrow
+public static class NaNValueInfoThrow
 {
     #region Arguments
     /// <summary>
@@ -290,7 +302,7 @@ public static class FloatInfoThrow
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfArgNegative<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
-        where TInfo : IFloatInfo<TValue>
+        where TInfo : INaNValueInfo<TValue>
         => info.Sign(paramValue) < 0
             ? throw new ArgumentOutOfRangeException(paramName, paramValue, message ?? "Value cannot be negative.")
             : paramValue;
@@ -311,7 +323,7 @@ public static class FloatInfoThrow
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfArgNotPositive<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
-        where TInfo : IFloatInfo<TValue>
+        where TInfo : INaNValueInfo<TValue>
         => info.Sign(paramValue) <= 0
             ? throw new ArgumentOutOfRangeException(paramName, paramValue, message ?? "Value must be positive.")
             : paramValue;
@@ -332,7 +344,7 @@ public static class FloatInfoThrow
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfArgNotNegative<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
-        where TInfo : IFloatInfo<TValue>
+        where TInfo : INaNValueInfo<TValue>
         => info.Sign(paramValue) >= 0
             ? throw new ArgumentOutOfRangeException(paramName, paramValue, message ?? "Value must be negative.")
             : paramValue;
@@ -353,7 +365,7 @@ public static class FloatInfoThrow
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfArgPositive<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
-        where TInfo : IFloatInfo<TValue>
+        where TInfo : INaNValueInfo<TValue>
         => info.Sign(paramValue) > 0
             ? throw new ArgumentOutOfRangeException(paramName, paramValue, message ?? "Value cannot be positive.")
             : paramValue;
@@ -374,7 +386,7 @@ public static class FloatInfoThrow
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfArgNaN<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
-        where TInfo : IFloatInfo<TValue>
+        where TInfo : INaNValueInfo<TValue>
         => info.IsNaN(paramValue)
             ? throw new ArgumentOutOfRangeException(
                 paramName, message ?? "Floating point not-a-number values are not permitted.")
@@ -398,7 +410,7 @@ public static class FloatInfoThrow
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfPropSetNegative<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
-        where TInfo : IFloatInfo<TValue>
+        where TInfo : INaNValueInfo<TValue>
         => info.Sign(propSetValue) < 0
             ? throw new PropertySetOutOfRangeException(message ?? "Value cannot be negative.", propName, propSetValue)
             : propSetValue;
@@ -419,7 +431,7 @@ public static class FloatInfoThrow
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfPropSetNotPositive<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
-        where TInfo : IFloatInfo<TValue>
+        where TInfo : INaNValueInfo<TValue>
         => info.Sign(propSetValue) <= 0
             ? throw new PropertySetOutOfRangeException(message ?? "Value must be positive.", propName, propSetValue)
             : propSetValue;
@@ -440,7 +452,7 @@ public static class FloatInfoThrow
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfPropSetNotNegative<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
-        where TInfo : IFloatInfo<TValue>
+        where TInfo : INaNValueInfo<TValue>
         => info.Sign(propSetValue) >= 0
             ? throw new PropertySetOutOfRangeException(message ?? "Value must be negative.", propName, propSetValue)
             : propSetValue;
@@ -461,7 +473,7 @@ public static class FloatInfoThrow
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfPropSetPositive<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
-        where TInfo : IFloatInfo<TValue>
+        where TInfo : INaNValueInfo<TValue>
         => info.Sign(propSetValue) > 0
             ? throw new PropertySetOutOfRangeException(message ?? "Value cannot be positive.", propName, propSetValue)
             : propSetValue;
@@ -482,9 +494,10 @@ public static class FloatInfoThrow
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfPropSetNaN<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
-        where TInfo : IFloatInfo<TValue>
+        where TInfo : INaNValueInfo<TValue>
         => info.IsNaN(propSetValue)
             ? throw new PropertySetOutOfRangeException(message ?? "Not-a-number values are not permitted.", propName)
             : propSetValue;
     #endregion
 }
+
