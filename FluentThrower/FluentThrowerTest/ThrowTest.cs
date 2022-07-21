@@ -14,7 +14,7 @@ namespace Rem.CoreTest.Utilities.FluentThrower;
 /// A basic test that the library works.
 /// </summary>
 [TestClass]
-public class Test
+public class ThrowTest
 {
     #region NumericRange
     /// <summary>
