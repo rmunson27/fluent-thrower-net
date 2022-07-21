@@ -271,31 +271,6 @@ public static class SignInfoThrow
 public static class FiniteInfoThrow
 {
     /// <summary>
-    /// Throws an exception if the property set value passed in is not finite.
-    /// </summary>
-    /// <typeparam name="TInfo"></typeparam>
-    /// <typeparam name="TValue"></typeparam>
-    /// <param name="info">
-    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
-    /// </param>
-    /// <param name="propSetValue">The value the property is being set to.</param>
-    /// <param name="propName">The name of the property to test.</param>
-    /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
-    /// <returns><paramref name="propSetValue"/></returns>
-    /// <exception cref="PropertySetOutOfRangeException">
-    /// <paramref name="propSetValue"/> was not finite.
-    /// </exception>
-    [return: Finite]
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue IfPropSetNotFinite<TInfo, TValue>(
-        TInfo info, TValue propSetValue, string propName, string? message)
-        where TInfo : IFiniteInfo<TValue>
-        => info.IsFinite(propSetValue)
-            ? propSetValue
-            : throw new PropertySetOutOfRangeException(
-                propName, message ?? "Non-finite values are not permitted.", propSetValue);
-
-    /// <summary>
     /// Throws an exception if the argument value passed in is not finite.
     /// </summary>
     /// <typeparam name="TInfo"></typeparam>
@@ -319,6 +294,31 @@ public static class FiniteInfoThrow
             ? paramValue
             : throw new ArgumentOutOfRangeException(
                 paramName, paramValue, message ?? "Infinite values are not permitted.");
+
+    /// <summary>
+    /// Throws an exception if the property set value passed in is not finite.
+    /// </summary>
+    /// <typeparam name="TInfo"></typeparam>
+    /// <typeparam name="TValue"></typeparam>
+    /// <param name="info">
+    /// An object to use to determine numeric properties of <typeparamref name="TValue"/> instances.
+    /// </param>
+    /// <param name="propSetValue">The value the property is being set to.</param>
+    /// <param name="propName">The name of the property to test.</param>
+    /// <param name="message">An optional error message, or <see langword="null"/> to use a default message.</param>
+    /// <returns><paramref name="propSetValue"/></returns>
+    /// <exception cref="PropertySetOutOfRangeException">
+    /// <paramref name="propSetValue"/> was not finite.
+    /// </exception>
+    [return: Finite]
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TValue IfPropSetNotFinite<TInfo, TValue>(
+        TInfo info, TValue propSetValue, string propName, string? message)
+        where TInfo : IFiniteInfo<TValue>
+        => info.IsFinite(propSetValue)
+            ? propSetValue
+            : throw new PropertySetOutOfRangeException(
+                propName, message ?? "Non-finite values are not permitted.", propSetValue);
 }
 
 /// <summary>
