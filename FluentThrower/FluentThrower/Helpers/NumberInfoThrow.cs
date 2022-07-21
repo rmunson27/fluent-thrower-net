@@ -1,4 +1,5 @@
-﻿using Rem.Core.ComponentModel;
+﻿using Rem.Core.Attributes;
+using Rem.Core.ComponentModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,7 @@ public static class NumberInfoThrow
     /// <exception cref="ArgumentOutOfRangeException">
     /// <paramref name="paramValue"/> was zero.
     /// </exception>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfArgZero<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
@@ -51,6 +53,7 @@ public static class NumberInfoThrow
     /// <exception cref="PropertySetOutOfRangeException">
     /// <paramref name="propSetValue"/> was zero.
     /// </exception>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfPropSetZero<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
@@ -81,6 +84,7 @@ public static class SignInfoThrow
     /// <exception cref="ArgumentOutOfRangeException">
     /// <paramref name="paramValue"/> was negative.
     /// </exception>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfArgNegative<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
@@ -104,6 +108,7 @@ public static class SignInfoThrow
     /// <exception cref="ArgumentOutOfRangeException">
     /// <paramref name="paramValue"/> was not positive.
     /// </exception>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfArgNotPositive<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
@@ -127,6 +132,7 @@ public static class SignInfoThrow
     /// <exception cref="ArgumentOutOfRangeException">
     /// <paramref name="paramValue"/> was not negative.
     /// </exception>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfArgNotNegative<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
@@ -150,6 +156,7 @@ public static class SignInfoThrow
     /// <exception cref="ArgumentOutOfRangeException">
     /// <paramref name="paramValue"/> was positive.
     /// </exception>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfArgPositive<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
@@ -175,6 +182,7 @@ public static class SignInfoThrow
     /// <exception cref="PropertySetOutOfRangeException">
     /// <paramref name="propSetValue"/> was negative.
     /// </exception>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfPropSetNegative<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
@@ -198,6 +206,7 @@ public static class SignInfoThrow
     /// <exception cref="PropertySetOutOfRangeException">
     /// <paramref name="propSetValue"/> was not positive.
     /// </exception>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfPropSetNotPositive<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
@@ -221,6 +230,7 @@ public static class SignInfoThrow
     /// <exception cref="PropertySetOutOfRangeException">
     /// <paramref name="propSetValue"/> was not negative.
     /// </exception>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfPropSetNotNegative<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
@@ -244,6 +254,7 @@ public static class SignInfoThrow
     /// <exception cref="PropertySetOutOfRangeException">
     /// <paramref name="propSetValue"/> was positive.
     /// </exception>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfPropSetPositive<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
@@ -274,6 +285,7 @@ public static class FiniteInfoThrow
     /// <exception cref="PropertySetOutOfRangeException">
     /// <paramref name="propSetValue"/> was not finite.
     /// </exception>
+    [return: Finite]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfPropSetNotFinite<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
@@ -298,6 +310,7 @@ public static class FiniteInfoThrow
     /// <exception cref="ArgumentOutOfRangeException">
     /// <paramref name="paramValue"/> was not finite.
     /// </exception>
+    [return: Finite]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfArgNotFinite<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
@@ -327,6 +340,7 @@ public static class NaNValueInfoThrow
     /// <exception cref="ArgumentOutOfRangeException">
     /// <paramref name="paramValue"/> was negative.
     /// </exception>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfArgNegative<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
@@ -350,6 +364,7 @@ public static class NaNValueInfoThrow
     /// <exception cref="ArgumentOutOfRangeException">
     /// <paramref name="paramValue"/> was not positive.
     /// </exception>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfArgNotPositive<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
@@ -373,6 +388,7 @@ public static class NaNValueInfoThrow
     /// <exception cref="ArgumentOutOfRangeException">
     /// <paramref name="paramValue"/> was not negative.
     /// </exception>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfArgNotNegative<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
@@ -396,6 +412,7 @@ public static class NaNValueInfoThrow
     /// <exception cref="ArgumentOutOfRangeException">
     /// <paramref name="paramValue"/> was positive.
     /// </exception>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfArgPositive<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
@@ -419,6 +436,7 @@ public static class NaNValueInfoThrow
     /// <exception cref="ArgumentOutOfRangeException">
     /// <paramref name="paramValue"/> was NaN.
     /// </exception>
+    [return: NotNaN]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfArgNaN<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
@@ -445,6 +463,7 @@ public static class NaNValueInfoThrow
     /// <exception cref="PropertySetOutOfRangeException">
     /// <paramref name="propSetValue"/> was negative.
     /// </exception>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfPropSetNegative<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
@@ -468,6 +487,7 @@ public static class NaNValueInfoThrow
     /// <exception cref="PropertySetOutOfRangeException">
     /// <paramref name="propSetValue"/> was not positive.
     /// </exception>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfPropSetNotPositive<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
@@ -491,6 +511,7 @@ public static class NaNValueInfoThrow
     /// <exception cref="PropertySetOutOfRangeException">
     /// <paramref name="propSetValue"/> was not negative.
     /// </exception>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfPropSetNotNegative<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
@@ -514,6 +535,7 @@ public static class NaNValueInfoThrow
     /// <exception cref="PropertySetOutOfRangeException">
     /// <paramref name="propSetValue"/> was positive.
     /// </exception>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfPropSetPositive<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
@@ -537,6 +559,7 @@ public static class NaNValueInfoThrow
     /// <exception cref="PropertySetOutOfRangeException">
     /// <paramref name="propSetValue"/> was NaN.
     /// </exception>
+    [return: NotNaN]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TValue IfPropSetNaN<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)

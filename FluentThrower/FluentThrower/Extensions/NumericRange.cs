@@ -1,4 +1,5 @@
-﻿using Rem.Core.Utilities.FluentThrower.Helpers;
+﻿using Rem.Core.Attributes;
+using Rem.Core.Utilities.FluentThrower.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,7 @@ public static class NumericRangeThrowerExtensions
     #region Byte
     /// <inheritdoc cref="NumberInfoThrow.IfArgZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static byte IfArgZero(
         this INumericRangeThrower _,
@@ -28,6 +30,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfPropSetZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static byte IfPropSetZero(
         this INumericRangeThrower _,
@@ -38,6 +41,7 @@ public static class NumericRangeThrowerExtensions
     #region UShort
     /// <inheritdoc cref="NumberInfoThrow.IfArgZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static ushort IfArgZero(
         this INumericRangeThrower _,
@@ -46,6 +50,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfPropSetZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static ushort IfPropSetZero(
         this INumericRangeThrower _,
@@ -56,6 +61,7 @@ public static class NumericRangeThrowerExtensions
     #region UInt
     /// <inheritdoc cref="NumberInfoThrow.IfArgZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static uint IfArgZero(
         this INumericRangeThrower _,
@@ -64,6 +70,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfPropSetZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static uint IfPropSetZero(
         this INumericRangeThrower _,
@@ -74,6 +81,7 @@ public static class NumericRangeThrowerExtensions
     #region ULong
     /// <inheritdoc cref="NumberInfoThrow.IfArgZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static ulong IfArgZero(
         this INumericRangeThrower _,
@@ -82,6 +90,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfPropSetZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static ulong IfPropSetZero(
         this INumericRangeThrower _,
@@ -95,6 +104,7 @@ public static class NumericRangeThrowerExtensions
     #region Arguments
     /// <inheritdoc cref="SignInfoThrow.IfArgNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static sbyte IfArgNegative(
         this INumericRangeThrower _,
@@ -103,6 +113,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static sbyte IfArgNotPositive(
         this INumericRangeThrower _,
@@ -111,6 +122,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfArgZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static sbyte IfArgZero(
         this INumericRangeThrower _,
@@ -119,6 +131,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static sbyte IfArgNotNegative(
         this INumericRangeThrower _,
@@ -127,6 +140,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static sbyte IfArgPositive(
         this INumericRangeThrower _,
@@ -137,6 +151,7 @@ public static class NumericRangeThrowerExtensions
     #region Properties
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static sbyte IfPropSetNegative(
         this INumericRangeThrower _,
@@ -145,6 +160,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static sbyte IfPropSetNotPositive(
         this INumericRangeThrower _,
@@ -153,6 +169,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfPropSetZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static sbyte IfPropSetZero(
         this INumericRangeThrower _,
@@ -161,6 +178,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static sbyte IfPropSetNotNegative(
         this INumericRangeThrower _,
@@ -169,6 +187,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static sbyte IfPropSetPositive(
         this INumericRangeThrower _,
@@ -181,6 +200,7 @@ public static class NumericRangeThrowerExtensions
     #region Arguments
     /// <inheritdoc cref="SignInfoThrow.IfArgNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static short IfArgNegative(
         this INumericRangeThrower _,
@@ -189,6 +209,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static short IfArgNotPositive(
         this INumericRangeThrower _,
@@ -197,6 +218,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfArgZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static short IfArgZero(
         this INumericRangeThrower _,
@@ -205,6 +227,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static short IfArgNotNegative(
         this INumericRangeThrower _,
@@ -213,6 +236,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static short IfArgPositive(
         this INumericRangeThrower _,
@@ -223,6 +247,7 @@ public static class NumericRangeThrowerExtensions
     #region Properties
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static short IfPropSetNegative(
         this INumericRangeThrower _,
@@ -231,6 +256,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static short IfPropSetNotPositive(
         this INumericRangeThrower _,
@@ -239,6 +265,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfPropSetZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static short IfPropSetZero(
         this INumericRangeThrower _,
@@ -247,6 +274,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static short IfPropSetNotNegative(
         this INumericRangeThrower _,
@@ -255,6 +283,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static short IfPropSetPositive(
         this INumericRangeThrower _,
@@ -267,6 +296,7 @@ public static class NumericRangeThrowerExtensions
     #region Arguments
     /// <inheritdoc cref="SignInfoThrow.IfArgNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static int IfArgNegative(
         this INumericRangeThrower _,
@@ -275,6 +305,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static int IfArgNotPositive(
         this INumericRangeThrower _,
@@ -283,6 +314,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfArgZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static int IfArgZero(
         this INumericRangeThrower _,
@@ -291,6 +323,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static int IfArgNotNegative(
         this INumericRangeThrower _,
@@ -299,6 +332,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static int IfArgPositive(
         this INumericRangeThrower _,
@@ -309,6 +343,7 @@ public static class NumericRangeThrowerExtensions
     #region Properties
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static int IfPropSetNegative(
         this INumericRangeThrower _,
@@ -317,6 +352,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static int IfPropSetNotPositive(
         this INumericRangeThrower _,
@@ -325,6 +361,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfPropSetZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static int IfPropSetZero(
         this INumericRangeThrower _,
@@ -333,6 +370,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static int IfPropSetNotNegative(
         this INumericRangeThrower _,
@@ -341,6 +379,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static int IfPropSetPositive(
         this INumericRangeThrower _,
@@ -353,6 +392,7 @@ public static class NumericRangeThrowerExtensions
     #region Arguments
     /// <inheritdoc cref="SignInfoThrow.IfArgNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static long IfArgNegative(
         this INumericRangeThrower _,
@@ -361,6 +401,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static long IfArgNotPositive(
         this INumericRangeThrower _,
@@ -369,6 +410,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfArgZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static long IfArgZero(
         this INumericRangeThrower _,
@@ -377,6 +419,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static long IfArgNotNegative(
         this INumericRangeThrower _,
@@ -385,6 +428,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static long IfArgPositive(
         this INumericRangeThrower _,
@@ -395,6 +439,7 @@ public static class NumericRangeThrowerExtensions
     #region Properties
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static long IfPropSetNegative(
         this INumericRangeThrower _,
@@ -403,6 +448,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static long IfPropSetNotPositive(
         this INumericRangeThrower _,
@@ -411,6 +457,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfPropSetZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static long IfPropSetZero(
         this INumericRangeThrower _,
@@ -419,6 +466,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static long IfPropSetNotNegative(
         this INumericRangeThrower _,
@@ -427,6 +475,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static long IfPropSetPositive(
         this INumericRangeThrower _,
@@ -439,6 +488,7 @@ public static class NumericRangeThrowerExtensions
     #region Arguments
     /// <inheritdoc cref="SignInfoThrow.IfArgNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static BigInteger IfArgNegative(
         this INumericRangeThrower _,
@@ -447,6 +497,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static BigInteger IfArgNotPositive(
         this INumericRangeThrower _,
@@ -455,6 +506,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfArgZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static BigInteger IfArgZero(
         this INumericRangeThrower _,
@@ -463,6 +515,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static BigInteger IfArgNotNegative(
         this INumericRangeThrower _,
@@ -471,6 +524,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static BigInteger IfArgPositive(
         this INumericRangeThrower _,
@@ -481,6 +535,7 @@ public static class NumericRangeThrowerExtensions
     #region Properties
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static BigInteger IfPropSetNegative(
         this INumericRangeThrower _,
@@ -489,6 +544,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static BigInteger IfPropSetNotPositive(
         this INumericRangeThrower _,
@@ -497,6 +553,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfPropSetZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static BigInteger IfPropSetZero(
         this INumericRangeThrower _,
@@ -505,6 +562,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static BigInteger IfPropSetNotNegative(
         this INumericRangeThrower _,
@@ -513,6 +571,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static BigInteger IfPropSetPositive(
         this INumericRangeThrower _,
@@ -525,6 +584,7 @@ public static class NumericRangeThrowerExtensions
     #region Arguments
     /// <inheritdoc cref="SignInfoThrow.IfArgNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static decimal IfArgNegative(
         this INumericRangeThrower _,
@@ -533,6 +593,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static decimal IfArgNotPositive(
         this INumericRangeThrower _,
@@ -541,6 +602,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfArgZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static decimal IfArgZero(
         this INumericRangeThrower _,
@@ -549,6 +611,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static decimal IfArgNotNegative(
         this INumericRangeThrower _,
@@ -557,6 +620,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfArgPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static decimal IfArgPositive(
         this INumericRangeThrower _,
@@ -567,6 +631,7 @@ public static class NumericRangeThrowerExtensions
     #region Properties
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static decimal IfPropSetNegative(
         this INumericRangeThrower _,
@@ -575,6 +640,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static decimal IfPropSetNotPositive(
         this INumericRangeThrower _,
@@ -583,6 +649,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfPropSetZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static decimal IfPropSetZero(
         this INumericRangeThrower _,
@@ -591,6 +658,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static decimal IfPropSetNotNegative(
         this INumericRangeThrower _,
@@ -599,6 +667,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static decimal IfPropSetPositive(
         this INumericRangeThrower _,
@@ -613,6 +682,7 @@ public static class NumericRangeThrowerExtensions
     #region Arguments
     /// <inheritdoc cref="NaNValueInfoThrow.IfArgNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float IfArgNegative(
         this INumericRangeThrower _,
@@ -621,6 +691,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfArgNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float IfArgNotPositive(
         this INumericRangeThrower _,
@@ -629,6 +700,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfArgZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float IfArgZero(
         this INumericRangeThrower _,
@@ -637,6 +709,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfArgNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float IfArgNotNegative(
         this INumericRangeThrower _,
@@ -645,6 +718,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfArgPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float IfArgPositive(
         this INumericRangeThrower _,
@@ -653,6 +727,8 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="FiniteInfoThrow.IfArgNotFinite{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Finite]
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float IfArgNotFinite(
         this INumericRangeThrower _,
         float paramValue, string paramName, string? message = null)
@@ -660,6 +736,8 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfArgNaN{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NotNaN]
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float IfArgNaN(
         this INumericRangeThrower _,
         float paramValue, string paramName, string? message = null)
@@ -669,6 +747,7 @@ public static class NumericRangeThrowerExtensions
     #region Properties
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float IfPropSetNegative(
         this INumericRangeThrower _,
@@ -677,6 +756,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float IfPropSetNotPositive(
         this INumericRangeThrower _,
@@ -685,6 +765,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfPropSetZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float IfPropSetZero(
         this INumericRangeThrower _,
@@ -693,6 +774,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfPropSetNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float IfPropSetNotNegative(
         this INumericRangeThrower _,
@@ -701,6 +783,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float IfPropSetPositive(
         this INumericRangeThrower _,
@@ -709,6 +792,8 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="FiniteInfoThrow.IfPropSetNotFinite{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Finite]
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float IfPropSetNotFinite(
         this INumericRangeThrower _,
         float propSetValue, string propName, string? message = null)
@@ -716,6 +801,8 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfPropSetNaN{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NotNaN]
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float IfPropSetNaN(
         this INumericRangeThrower _,
         float propSetValue, string propName, string? message = null)
@@ -727,6 +814,7 @@ public static class NumericRangeThrowerExtensions
     #region Arguments
     /// <inheritdoc cref="NaNValueInfoThrow.IfArgNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static double IfArgNegative(
         this INumericRangeThrower _,
@@ -735,6 +823,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfArgNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static double IfArgNotPositive(
         this INumericRangeThrower _,
@@ -743,6 +832,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfArgZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static double IfArgZero(
         this INumericRangeThrower _,
@@ -751,6 +841,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfArgNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static double IfArgNotNegative(
         this INumericRangeThrower _,
@@ -759,6 +850,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfArgPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static double IfArgPositive(
         this INumericRangeThrower _,
@@ -767,6 +859,8 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="FiniteInfoThrow.IfArgNotFinite{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Finite]
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static double IfArgNotFinite(
         this INumericRangeThrower _,
         double paramValue, string paramName, string? message = null)
@@ -774,6 +868,8 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfArgNaN{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NotNaN]
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static double IfArgNaN(
         this INumericRangeThrower _,
         double paramValue, string paramName, string? message = null)
@@ -783,6 +879,7 @@ public static class NumericRangeThrowerExtensions
     #region Properties
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static double IfPropSetNegative(
         this INumericRangeThrower _,
@@ -791,6 +888,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static double IfPropSetNotPositive(
         this INumericRangeThrower _,
@@ -799,6 +897,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfPropSetZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static double IfPropSetZero(
         this INumericRangeThrower _,
@@ -807,6 +906,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfPropSetNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static double IfPropSetNotNegative(
         this INumericRangeThrower _,
@@ -815,6 +915,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static double IfPropSetPositive(
         this INumericRangeThrower _,
@@ -823,6 +924,8 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="FiniteInfoThrow.IfPropSetNotFinite{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Finite]
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static double IfPropSetNotFinite(
         this INumericRangeThrower _,
         double propSetValue, string propName, string? message = null)
@@ -830,6 +933,8 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfPropSetNaN{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NotNaN]
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static double IfPropSetNaN(
         this INumericRangeThrower _,
         double propSetValue, string propName, string? message = null)
@@ -842,6 +947,7 @@ public static class NumericRangeThrowerExtensions
     #region Arguments
     /// <inheritdoc cref="NaNValueInfoThrow.IfArgNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Half IfArgNegative(
         this INumericRangeThrower _,
@@ -850,6 +956,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfArgNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Half IfArgNotPositive(
         this INumericRangeThrower _,
@@ -858,6 +965,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfArgZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Half IfArgZero(
         this INumericRangeThrower _,
@@ -866,6 +974,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfArgNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Half IfArgNotNegative(
         this INumericRangeThrower _,
@@ -874,6 +983,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfArgPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Half IfArgPositive(
         this INumericRangeThrower _,
@@ -882,6 +992,8 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="FiniteInfoThrow.IfArgNotFinite{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Finite]
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Half IfArgNotFinite(
         this INumericRangeThrower _,
         Half paramValue, string paramName, string? message = null)
@@ -889,6 +1001,8 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfArgNaN{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NotNaN]
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Half IfArgNaN(
         this INumericRangeThrower _,
         Half paramValue, string paramName, string? message = null)
@@ -898,6 +1012,7 @@ public static class NumericRangeThrowerExtensions
     #region Properties
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonNegative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Half IfPropSetNegative(
         this INumericRangeThrower _,
@@ -906,6 +1021,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetNotPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Positive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Half IfPropSetNotPositive(
         this INumericRangeThrower _,
@@ -914,6 +1030,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NumberInfoThrow.IfPropSetZero{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonZero]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Half IfPropSetZero(
         this INumericRangeThrower _,
@@ -922,6 +1039,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfPropSetNotNegative{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Negative]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Half IfPropSetNotNegative(
         this INumericRangeThrower _,
@@ -930,6 +1048,7 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="SignInfoThrow.IfPropSetPositive{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NonPositive]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Half IfPropSetPositive(
         this INumericRangeThrower _,
@@ -938,6 +1057,8 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="FiniteInfoThrow.IfPropSetNotFinite{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: Finite]
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Half IfPropSetNotFinite(
         this INumericRangeThrower _,
         Half propSetValue, string propName, string? message = null)
@@ -945,6 +1066,8 @@ public static class NumericRangeThrowerExtensions
 
     /// <inheritdoc cref="NaNValueInfoThrow.IfPropSetNaN{TInfo, TValue}(TInfo, TValue, string, string?)"/>
     /// <param name="_"></param>
+    [return: NotNaN]
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static Half IfPropSetNaN(
         this INumericRangeThrower _,
         Half propSetValue, string propName, string? message = null)
