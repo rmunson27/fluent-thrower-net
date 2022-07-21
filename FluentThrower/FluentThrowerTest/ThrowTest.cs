@@ -28,6 +28,37 @@ public class ThrowTest
         Throw.IfArgNegative(0, "intArg"); // Should not throw
         Assert.ThrowsException<PropertySetOutOfRangeException>(() => Throw.IfPropSetNegative(-3, "IntProp"));
         Throw.IfPropSetNegative(2, "IntProp"); // Should not throw
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => Throw.IfArgNotPositive(0, "intArg"));
+        Throw.IfArgNotPositive(1, "intArg"); // Should not throw
+        Assert.ThrowsException<PropertySetOutOfRangeException>(() => Throw.IfPropSetNotPositive(0, "IntProp"));
+        Throw.IfPropSetNotPositive(1, "IntProp");
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => Throw.IfArgZero(0, "IntProp"));
+        Throw.IfArgZero(1, "fff"); // Should not throw
+        Assert.ThrowsException<PropertySetOutOfRangeException>(() => Throw.IfPropSetZero(0), "fjksdjf");
+        Throw.IfPropSetZero(3, "dfasd"); // Should not throw
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => Throw.IfArgNotNegative(0, "fff"));
+        Throw.IfArgNotNegative(-1, "ffff"); // Should not throw
+        Assert.ThrowsException<PropertySetOutOfRangeException>(() => Throw.IfPropSetNotNegative(0, "fff"));
+        Throw.IfPropSetNotNegative(-1, "ffff"); // Should not throw
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => Throw.IfArgPositive(1, "sadkfj"));
+        Throw.IfArgPositive(0, "gbvvf"); // Should not throw
+        Assert.ThrowsException<PropertySetOutOfRangeException>(() => Throw.IfPropSetPositive(2, "fff"));
+        Throw.IfPropSetPositive(-1, "ffff"); // Should not throw
+
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => Throw.IfArgNotFinite(double.PositiveInfinity, "dd"));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => Throw.IfArgNotFinite(double.NaN, "dd"));
+        Throw.IfArgNotFinite(3, "fs"); // Should not throw
+
+        Assert.ThrowsException<PropertySetOutOfRangeException>(() => Throw.IfPropSetNotFinite(double.PositiveInfinity, "dd"));
+        Assert.ThrowsException<PropertySetOutOfRangeException>(() => Throw.IfPropSetNotFinite(double.NaN, "dd"));
+        Throw.IfPropSetNotFinite(3, "fs"); // Should not throw
+
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => Throw.IfArgNaN(double.NaN, "Fdsasd"));
+        Throw.IfArgNaN(double.PositiveInfinity, "asdfasdf"); // Should not throw
+
+        Assert.ThrowsException<PropertySetOutOfRangeException>(() => Throw.IfPropSetNaN(double.NaN, "Fdsasd"));
+        Throw.IfPropSetNaN(double.PositiveInfinity, "asdfasdf"); // Should not throw
+
     }
     #endregion
 
