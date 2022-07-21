@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace Rem.Core.Utilities.FluentThrower.Helpers;
 
+#if NET5_0_OR_GREATER
+using half = Half;
+#endif
+
 #region Interface Implementations
 /// <summary>
 /// <see cref="INumberInfo{T}"/> constants for various common .NET numeric types.
@@ -328,9 +332,9 @@ public static class NumberInfo
 
 #if NET5_0_OR_GREATER
     /// <summary>
-    /// An <see cref="IHalfInfo{T}"/> implementation for <see cref="float"/> instances.
+    /// An <see cref="IFloatInfo{T}"/> implementation for <see cref="half"/> instances.
     /// </summary>
-    public sealed class HalfInfo : IFloatInfo<Half>
+    public sealed class HalfInfo : IFloatInfo<half>
     {
         /// <summary>
         /// This class should be a singleton with the only instance stored by <see cref="NumberInfo"/>.
@@ -339,23 +343,23 @@ public static class NumberInfo
 
         /// <inheritdoc/>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public bool IsFinite(Half value) => !(IsInfinity(value) || IsNaN(value));
+        public bool IsFinite(half value) => !(IsInfinity(value) || IsNaN(value));
 
         /// <inheritdoc/>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public bool IsInfinity(Half value) => Half.IsInfinity(value);
+        public bool IsInfinity(half value) => half.IsInfinity(value);
 
         /// <inheritdoc/>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public int? Sign(Half value) => IsNaN(value) ? null : Math.Sign((float)value);
+        public int? Sign(half value) => IsNaN(value) ? null : Math.Sign((float)value);
 
         /// <inheritdoc/>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public bool IsNaN(Half value) => Half.IsNaN(value);
+        public bool IsNaN(half value) => half.IsNaN(value);
 
         /// <inheritdoc/>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public bool IsZero(Half value) => value == (Half)0;
+        public bool IsZero(half value) => value == (half)0;
     }
 #endif
     #endregion
