@@ -9,7 +9,7 @@ namespace Rem.Core.Utilities.FluentThrower.Extensions;
 /// <summary>
 /// A series of extension methods offering a simple fluent API for throwing exceptions relating to comparable values.
 /// </summary>
-public static class ComparisonFluentThrowerExtensions
+public static class ComparisonThrowerExtensions
 {
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is greater than the maximum
@@ -17,8 +17,8 @@ public static class ComparisonFluentThrowerExtensions
     /// </summary>
     /// <param name="_"></param>
     /// <param name="max">The maximum value to check against.</param>
-    /// <param name="argValue">The value of the argument.</param>
-    /// <param name="argName">The name of the argument.</param>
+    /// <param name="paramValue">The value of the parameter to test.</param>
+    /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">
     /// An optional message to construct the exception with, or <see langword="null"/> to use a default message.
     /// </param>
@@ -28,14 +28,14 @@ public static class ComparisonFluentThrowerExtensions
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TNumber IfArgGreaterThan<TNumber>(
-        this IComparisonThrower _, in TNumber max, in TNumber argValue, string argName, string? message = null)
+        this IComparisonThrower _, in TNumber max, in TNumber paramValue, string paramName, string? message = null)
         where TNumber : IComparable<TNumber>
-        => argValue.CompareTo(max) > 0
+        => paramValue.CompareTo(max) > 0
             ? throw new ArgumentOutOfRangeException(
-                argName,
-                argValue,
+                paramName,
+                paramValue,
                 message ?? $"Value must be greater than {max}.")
-            : argValue;
+            : paramValue;
 
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is greater than or equal
@@ -43,8 +43,8 @@ public static class ComparisonFluentThrowerExtensions
     /// </summary>
     /// <param name="_"></param>
     /// <param name="max">The maximum value to check against.</param>
-    /// <param name="argValue">The value of the argument.</param>
-    /// <param name="argName">The name of the argument.</param>
+    /// <param name="paramValue">The value of the parameter to test.</param>
+    /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">
     /// An optional message to construct the exception with, or <see langword="null"/> to use a default message.
     /// </param>
@@ -54,14 +54,14 @@ public static class ComparisonFluentThrowerExtensions
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TNumber IfArgGreaterThanOrEqualTo<TNumber>(
-        this IComparisonThrower _, in TNumber max, in TNumber argValue, string argName, string? message = null)
+        this IComparisonThrower _, in TNumber max, in TNumber paramValue, string paramName, string? message = null)
         where TNumber : IComparable<TNumber>
-        => argValue.CompareTo(max) >= 0
+        => paramValue.CompareTo(max) >= 0
             ? throw new ArgumentOutOfRangeException(
-                argName,
-                argValue,
+                paramName,
+                paramValue,
                 message ?? $"Value must be greater than {max}.")
-            : argValue;
+            : paramValue;
 
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is less than or equal
@@ -69,8 +69,8 @@ public static class ComparisonFluentThrowerExtensions
     /// </summary>
     /// <param name="_"></param>
     /// <param name="min">The minimum value to check against.</param>
-    /// <param name="argValue">The value of the argument.</param>
-    /// <param name="argName">The name of the argument.</param>
+    /// <param name="paramValue">The value of the parameter to test.</param>
+    /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">
     /// An optional message to construct the exception with, or <see langword="null"/> to use a default message.
     /// </param>
@@ -80,14 +80,14 @@ public static class ComparisonFluentThrowerExtensions
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TNumber IfArgLessThanOrEqualTo<TNumber>(
-        this IComparisonThrower _, in TNumber min, in TNumber argValue, string argName, string? message = null)
+        this IComparisonThrower _, in TNumber min, in TNumber paramValue, string paramName, string? message = null)
         where TNumber : IComparable<TNumber>
-        => argValue.CompareTo(min) <= 0
+        => paramValue.CompareTo(min) <= 0
             ? throw new ArgumentOutOfRangeException(
-                argName,
-                argValue,
+                paramName,
+                paramValue,
                 message ?? $"Value must be greater than {min}.")
-            : argValue;
+            : paramValue;
 
     /// <summary>
     /// Throws an <see cref="ArgumentOutOfRangeException"/> if the argument value passed in is less than the minimum
@@ -95,8 +95,8 @@ public static class ComparisonFluentThrowerExtensions
     /// </summary>
     /// <param name="_"></param>
     /// <param name="min">The minimum value to check against.</param>
-    /// <param name="argValue">The value of the argument.</param>
-    /// <param name="argName">The name of the argument.</param>
+    /// <param name="paramValue">The value of the parameter to test.</param>
+    /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">
     /// An optional message to construct the exception with, or <see langword="null"/> to use a default message.
     /// </param>
@@ -106,14 +106,14 @@ public static class ComparisonFluentThrowerExtensions
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TNumber IfArgLessThan<TNumber>(
-        this IComparisonThrower _, in TNumber min, in TNumber argValue, string argName, string? message = null)
+        this IComparisonThrower _, in TNumber min, in TNumber paramValue, string paramName, string? message = null)
         where TNumber : IComparable<TNumber>
-        => argValue.CompareTo(min) < 0
+        => paramValue.CompareTo(min) < 0
             ? throw new ArgumentOutOfRangeException(
-                argName,
-                argValue,
+                paramName,
+                paramValue,
                 message ?? $"Value must be greater than {min}.")
-            : argValue;
+            : paramValue;
 
     /// <summary>
     /// Throws a <see cref="PropertySetOutOfRangeException"/> if the property set value passed in is greater than the

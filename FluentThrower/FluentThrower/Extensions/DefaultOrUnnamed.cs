@@ -14,7 +14,7 @@ namespace Rem.Core.Utilities.FluentThrower.Extensions;
 /// A series of extension methods offering a simple fluent API for throwing exceptions relating to invalid default
 /// values or invalid enumeration values.
 /// </summary>
-public static class DefaultOrUnnamedFluentThrowerExtensions
+public static class DefaultOrUnnamedThrowerExtensions
 {
     #region Structs
     /// <summary>
@@ -23,22 +23,22 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     /// </summary>
     /// <typeparam name="TStruct"></typeparam>
     /// <param name="_"></param>
-    /// <param name="argValue">The value of the argument.</param>
-    /// <param name="argName">The name of the argument.</param>
+    /// <param name="paramValue">The value of the parameter to test.</param>
+    /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">
     /// An optional error message to construct an exception with, or <see langword="null"/> to use a
     /// default message.
     /// </param>
     /// <returns>The value passed in.</returns>
     /// <exception cref="StructArgumentDefaultException">
-    /// <paramref name="argValue"/> was the default value of type <typeparamref name="TStruct"/>.
+    /// <paramref name="paramValue"/> was the default value of type <typeparamref name="TStruct"/>.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [return: NonDefaultableStruct]
     public static TStruct IfStructArgDefault<TStruct>(
-        this IDefaultOrUnnamedThrower _, in TStruct argValue, string argName, string? message = null)
+        this IDefaultOrUnnamedThrower _, in TStruct paramValue, string paramName, string? message = null)
         where TStruct : struct, IDefaultableStruct
-        => argValue.IsDefault ? throw StructArgDefault(argName, message) : argValue;
+        => paramValue.IsDefault ? throw StructArgDefault(paramName, message) : paramValue;
 
     /// <summary>
     /// Throws a <see cref="StructArgumentDefaultException"/> if the <see cref="ImmutableArray{T}"/> argument value
@@ -46,24 +46,24 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     /// </summary>
     /// <typeparam name="T">The type of the <see cref="ImmutableArray{T}"/>.</typeparam>
     /// <param name="_"></param>
-    /// <param name="argValue">The value of the argument.</param>
-    /// <param name="argName">The name of the argument.</param>
+    /// <param name="paramValue">The value of the parameter to test.</param>
+    /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">
     /// An optional error message to construct an exception with, or <see langword="null"/> to use a
     /// default message.
     /// </param>
     /// <returns>The value passed in.</returns>
     /// <exception cref="StructArgumentDefaultException">
-    /// <paramref name="argValue"/> was the default value of type <see cref="ImmutableArray{T}"/>.
+    /// <paramref name="paramValue"/> was the default value of type <see cref="ImmutableArray{T}"/>.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [return: NotDefault]
     public static ImmutableArray<T> IfStructArgDefault<T>(
-        this IDefaultOrUnnamedThrower _, in ImmutableArray<T> argValue, string argName, string? message = null)
-        => argValue.IsDefault
+        this IDefaultOrUnnamedThrower _, in ImmutableArray<T> paramValue, string paramName, string? message = null)
+        => paramValue.IsDefault
             ? throw new StructArgumentDefaultException(
-                argName, message ?? "Immutable array argument was default.")
-            : argValue;
+                paramName, message ?? "Immutable array argument was default.")
+            : paramValue;
 
     /// <summary>
     /// Throws a <see cref="StructPropertySetDefaultException"/> if the property set value passed in is the
@@ -120,27 +120,27 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     /// </summary>
     /// <typeparam name="TEnum"></typeparam>
     /// <param name="_"></param>
-    /// <param name="argValue">The value of the argument.</param>
-    /// <param name="argName">The name of the argument.</param>
+    /// <param name="paramValue">The value of the parameter to test.</param>
+    /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">
     /// An optional error message to construct an exception with, or <see langword="null"/> to use a
     /// default message.
     /// </param>
     /// <returns>The value passed in.</returns>
     /// <exception cref="InvalidEnumArgumentException">
-    /// <paramref name="argValue"/> was not a named, defined value of type <typeparamref name="TEnum"/>.
+    /// <paramref name="paramValue"/> was not a named, defined value of type <typeparamref name="TEnum"/>.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [return: NamedEnum]
     public static TEnum IfEnumArgUnnamed<TEnum>(
-        this IDefaultOrUnnamedThrower _, TEnum argValue, string argName, string? message = null)
+        this IDefaultOrUnnamedThrower _, TEnum paramValue, string paramName, string? message = null)
         where TEnum : struct, Enum
-        => Enums.IsDefined(argValue)
-            ? argValue
+        => Enums.IsDefined(paramValue)
+            ? paramValue
             : throw new InvalidEnumArgumentException(
                 message is null
-                    ? $"Parameter '{argName}' must be a named, defined value of type {typeof(TEnum)}."
-                    : $"{message} (Parameter '{argName}')");
+                    ? $"Parameter '{paramName}' must be a named, defined value of type {typeof(TEnum)}."
+                    : $"{message} (Parameter '{paramName}')");
 
     /// <summary>
     /// Throws an <see cref="InvalidEnumArgumentException"/> if the argument passed in is not either
@@ -148,32 +148,32 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     /// </summary>
     /// <typeparam name="TEnum"></typeparam>
     /// <param name="_"></param>
-    /// <param name="argValue">The value of the argument.</param>
-    /// <param name="argName">The name of the argument.</param>
+    /// <param name="paramValue">The value of the parameter to test.</param>
+    /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">
     /// An optional error message to construct an exception with, or <see langword="null"/> to use a
     /// default message.
     /// </param>
     /// <returns>The value passed in.</returns>
     /// <exception cref="InvalidEnumArgumentException">
-    /// <paramref name="argValue"/> was not either <see langword="null"/> or a named, defined value of
+    /// <paramref name="paramValue"/> was not either <see langword="null"/> or a named, defined value of
     /// type <typeparamref name="TEnum"/>.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [return: NamedEnum]
     public static TEnum? IfEnumArgUnnamed<TEnum>(
-        this IDefaultOrUnnamedThrower _, TEnum? argValue, string argName, string? message = null)
+        this IDefaultOrUnnamedThrower _, TEnum? paramValue, string paramName, string? message = null)
         where TEnum : struct, Enum
     {
-        if (argValue is TEnum actualEnumValue)
+        if (paramValue is TEnum actualEnumValue)
         {
             return Enums.IsDefined(actualEnumValue)
-                    ? argValue
+                    ? paramValue
                     : throw new InvalidEnumArgumentException(
                         message is null
-                            ? $"Parameter '{argName}' must be either null or a named, defined"
+                            ? $"Parameter '{paramName}' must be either null or a named, defined"
                                 + $" value of type {typeof(TEnum)}."
-                            : $"{message} (Parameter '{argName}')");
+                            : $"{message} (Parameter '{paramName}')");
         }
         else return null;
     }
@@ -249,8 +249,8 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="_"></param>
-    /// <param name="argValue">The value of the argument.</param>
-    /// <param name="argName">The name of the argument.</param>
+    /// <param name="paramValue">The value of the parameter to test.</param>
+    /// <param name="paramName">The name of the parameter to test.</param>
     /// <param name="message">
     /// An optional message to construct the exception with, or <see langword="null"/> to use a default message.
     /// </param>
@@ -259,14 +259,14 @@ public static class DefaultOrUnnamedFluentThrowerExtensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [return: NotNull]
     public static T IfArgNull<T>(
-        this IDefaultOrUnnamedThrower _, T argValue, string argName, string? message = null)
+        this IDefaultOrUnnamedThrower _, T paramValue, string paramName, string? message = null)
     {
-        if (argValue is null)
+        if (paramValue is null)
         {
-            ArgumentNullException ex = message is null ? new(argName) : new(argName, message);
+            ArgumentNullException ex = message is null ? new(paramName) : new(paramName, message);
             throw ex;
         }
-        return argValue;
+        return paramValue;
     }
 
     /// <summary>

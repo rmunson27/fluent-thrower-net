@@ -16,7 +16,7 @@ using FloatThrowers = FloatInfoThrowers;
 /// A series of extension methods offering a simple fluent API for throwing exceptions relating to invalid
 /// numerical ranges.
 /// </summary>
-public static class NumericRangeFluentThrowerExtensions
+public static class NumericRangeThrowerExtensions
 {
     #region INumberInfo
     #region Byte
