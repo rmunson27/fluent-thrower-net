@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 namespace Rem.Core.Utilities.FluentThrower.Helpers;
 
 /// <summary>
-/// Helper methods for throwing exceptions using <see cref="INumberInfo{T}"/> instances.
+/// Provides functionality for throwing numeric range exceptions using generic <see cref="INumberInfo{T}"/> instances.
 /// </summary>
-public static class NumberInfoThrowers
+public static class NumberInfoThrow
 {
     #region Arguments
     /// <summary>
@@ -28,7 +28,7 @@ public static class NumberInfoThrowers
     /// <paramref name="paramValue"/> was negative.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfArgNegative<TInfo, TValue>(
+    public static TValue IfArgNegative<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
         where TInfo : ISignInfo<TValue>
         => info.Sign(paramValue) < 0
@@ -49,7 +49,7 @@ public static class NumberInfoThrowers
     /// <paramref name="paramValue"/> was not positive.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfArgNotPositive<TInfo, TValue>(
+    public static TValue IfArgNotPositive<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
         where TInfo : ISignInfo<TValue>
         => info.Sign(paramValue) <= 0
@@ -69,7 +69,7 @@ public static class NumberInfoThrowers
     /// <paramref name="paramValue"/> was zero.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfArgZero<TInfo, TValue>(
+    public static TValue IfArgZero<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
         where TInfo : INumberInfo<TValue>
         => info.IsZero(paramValue)
@@ -90,7 +90,7 @@ public static class NumberInfoThrowers
     /// <paramref name="paramValue"/> was not negative.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfArgNotNegative<TInfo, TValue>(
+    public static TValue IfArgNotNegative<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
         where TInfo : ISignInfo<TValue>
         => info.Sign(paramValue) >= 0
@@ -111,7 +111,7 @@ public static class NumberInfoThrowers
     /// <paramref name="paramValue"/> was positive.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfArgPositive<TInfo, TValue>(
+    public static TValue IfArgPositive<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
         where TInfo : ISignInfo<TValue>
         => info.Sign(paramValue) > 0
@@ -131,7 +131,7 @@ public static class NumberInfoThrowers
     /// <paramref name="paramValue"/> was not finite.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfArgNotFinite<TInfo, TValue>(
+    public static TValue IfArgNotFinite<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
         where TInfo : IFiniteInfo<TValue>
         => info.IsFinite(paramValue)
@@ -155,7 +155,7 @@ public static class NumberInfoThrowers
     /// <paramref name="propSetValue"/> was negative.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfPropSetNegative<TInfo, TValue>(
+    public static TValue IfPropSetNegative<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
         where TInfo : ISignInfo<TValue>
         => info.Sign(propSetValue) < 0
@@ -176,7 +176,7 @@ public static class NumberInfoThrowers
     /// <paramref name="propSetValue"/> was not positive.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfPropSetNotPositive<TInfo, TValue>(
+    public static TValue IfPropSetNotPositive<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
         where TInfo : ISignInfo<TValue>
         => info.Sign(propSetValue) <= 0
@@ -196,7 +196,7 @@ public static class NumberInfoThrowers
     /// <paramref name="propSetValue"/> was zero.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfPropSetZero<TInfo, TValue>(
+    public static TValue IfPropSetZero<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
         where TInfo : INumberInfo<TValue>
         => info.IsZero(propSetValue)
@@ -217,7 +217,7 @@ public static class NumberInfoThrowers
     /// <paramref name="propSetValue"/> was not negative.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfPropSetNotNegative<TInfo, TValue>(
+    public static TValue IfPropSetNotNegative<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
         where TInfo : ISignInfo<TValue>
         => info.Sign(propSetValue) >= 0
@@ -238,7 +238,7 @@ public static class NumberInfoThrowers
     /// <paramref name="propSetValue"/> was positive.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfPropSetPositive<TInfo, TValue>(
+    public static TValue IfPropSetPositive<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
         where TInfo : ISignInfo<TValue>
         => info.Sign(propSetValue) > 0
@@ -258,7 +258,7 @@ public static class NumberInfoThrowers
     /// <paramref name="propSetValue"/> was not finite.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfPropSetNotFinite<TInfo, TValue>(
+    public static TValue IfPropSetNotFinite<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
         where TInfo : IFiniteInfo<TValue>
         => info.IsFinite(propSetValue)
@@ -269,9 +269,9 @@ public static class NumberInfoThrowers
 }
 
 /// <summary>
-/// Helper methods for throwing exceptions using <see cref="IFloatInfo{T}"/> instances.
+/// Provides functionality for throwing numeric range exceptions using generic <see cref="IFloatInfo{T}"/> instances.
 /// </summary>
-public static class FloatInfoThrowers
+public static class FloatInfoThrow
 {
     #region Arguments
     /// <summary>
@@ -288,7 +288,7 @@ public static class FloatInfoThrowers
     /// <paramref name="paramValue"/> was negative.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfArgNegative<TInfo, TValue>(
+    public static TValue IfArgNegative<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
         where TInfo : IFloatInfo<TValue>
         => info.Sign(paramValue) < 0
@@ -309,7 +309,7 @@ public static class FloatInfoThrowers
     /// <paramref name="paramValue"/> was not positive.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfArgNotPositive<TInfo, TValue>(
+    public static TValue IfArgNotPositive<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
         where TInfo : IFloatInfo<TValue>
         => info.Sign(paramValue) <= 0
@@ -330,7 +330,7 @@ public static class FloatInfoThrowers
     /// <paramref name="paramValue"/> was not negative.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfArgNotNegative<TInfo, TValue>(
+    public static TValue IfArgNotNegative<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
         where TInfo : IFloatInfo<TValue>
         => info.Sign(paramValue) >= 0
@@ -351,7 +351,7 @@ public static class FloatInfoThrowers
     /// <paramref name="paramValue"/> was positive.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfArgPositive<TInfo, TValue>(
+    public static TValue IfArgPositive<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
         where TInfo : IFloatInfo<TValue>
         => info.Sign(paramValue) > 0
@@ -372,7 +372,7 @@ public static class FloatInfoThrowers
     /// <paramref name="paramValue"/> was NaN.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfArgNaN<TInfo, TValue>(
+    public static TValue IfArgNaN<TInfo, TValue>(
         TInfo info, TValue paramValue, string paramName, string? message)
         where TInfo : IFloatInfo<TValue>
         => info.IsNaN(paramValue)
@@ -396,7 +396,7 @@ public static class FloatInfoThrowers
     /// <paramref name="propSetValue"/> was negative.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfPropSetNegative<TInfo, TValue>(
+    public static TValue IfPropSetNegative<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
         where TInfo : IFloatInfo<TValue>
         => info.Sign(propSetValue) < 0
@@ -417,7 +417,7 @@ public static class FloatInfoThrowers
     /// <paramref name="propSetValue"/> was not positive.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfPropSetNotPositive<TInfo, TValue>(
+    public static TValue IfPropSetNotPositive<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
         where TInfo : IFloatInfo<TValue>
         => info.Sign(propSetValue) <= 0
@@ -438,7 +438,7 @@ public static class FloatInfoThrowers
     /// <paramref name="propSetValue"/> was not negative.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfPropSetNotNegative<TInfo, TValue>(
+    public static TValue IfPropSetNotNegative<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
         where TInfo : IFloatInfo<TValue>
         => info.Sign(propSetValue) >= 0
@@ -459,7 +459,7 @@ public static class FloatInfoThrowers
     /// <paramref name="propSetValue"/> was positive.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfPropSetPositive<TInfo, TValue>(
+    public static TValue IfPropSetPositive<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
         where TInfo : IFloatInfo<TValue>
         => info.Sign(propSetValue) > 0
@@ -480,7 +480,7 @@ public static class FloatInfoThrowers
     /// <paramref name="propSetValue"/> was NaN.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TValue ThrowIfPropSetNaN<TInfo, TValue>(
+    public static TValue IfPropSetNaN<TInfo, TValue>(
         TInfo info, TValue propSetValue, string propName, string? message)
         where TInfo : IFloatInfo<TValue>
         => info.IsNaN(propSetValue)
