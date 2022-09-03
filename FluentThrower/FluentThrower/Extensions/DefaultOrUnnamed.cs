@@ -131,7 +131,7 @@ public static class DefaultOrUnnamedThrowerExtensions
     /// <paramref name="paramValue"/> was not a named, defined value of type <typeparamref name="TEnum"/>.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    [return: NamedEnum]
+    [return: NameableEnum]
     public static TEnum IfEnumArgUnnamed<TEnum>(
         this IDefaultOrUnnamedThrower _, TEnum paramValue, string paramName, string? message = null)
         where TEnum : struct, Enum
@@ -160,7 +160,7 @@ public static class DefaultOrUnnamedThrowerExtensions
     /// type <typeparamref name="TEnum"/>.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    [return: NamedEnum]
+    [return: NameableEnum]
     public static TEnum? IfEnumArgUnnamed<TEnum>(
         this IDefaultOrUnnamedThrower _, TEnum? paramValue, string paramName, string? message = null)
         where TEnum : struct, Enum
@@ -194,7 +194,7 @@ public static class DefaultOrUnnamedThrowerExtensions
     /// <paramref name="propSetValue"/> was not a named, defined value of type <typeparamref name="TEnum"/>.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    [return: NamedEnum]
+    [return: NameableEnum]
     public static TEnum IfEnumPropSetUnnamed<TEnum>(
         this IDefaultOrUnnamedThrower _,
         TEnum propSetValue, [CallerMemberName] string? propName = null, string? message = null)
@@ -223,7 +223,7 @@ public static class DefaultOrUnnamedThrowerExtensions
     /// type <typeparamref name="TEnum"/>.
     /// </exception>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    [return: NamedEnum]
+    [return: NameableEnum]
     public static TEnum? IfEnumPropSetUnnamed<TEnum>(
         this IDefaultOrUnnamedThrower _,
         TEnum? propSetValue, [CallerMemberName] string? propName = null, string? message = null)
