@@ -22,3 +22,8 @@ public interface IComparisonThrower { }
 /// </summary>
 public interface INumericRangeThrower { }
 
+/// <summary>
+/// Exposes an implementing type to general-purpose fluent thrower extension methods.
+/// </summary>
+public interface IGeneralThrower { }
+

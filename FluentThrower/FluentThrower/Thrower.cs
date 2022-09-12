@@ -48,7 +48,7 @@ namespace Rem.Core.Utilities.FluentThrower;
 /// </code>
 /// </para>
 /// </remarks>
-public class Thrower : IDefaultOrUnnamedThrower, INumericRangeThrower, IComparisonThrower { }
+public class Thrower : IGeneralThrower, IDefaultOrUnnamedThrower, INumericRangeThrower, IComparisonThrower { }
 
 /// <summary>
 /// Wraps a <see cref="Thrower"/> instance that can be imported to allow throwing exceptions using the interface
