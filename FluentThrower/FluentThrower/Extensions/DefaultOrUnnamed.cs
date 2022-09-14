@@ -18,6 +18,30 @@ public static class DefaultOrUnnamedThrowerExtensions
 {
     #region Structs
     /// <summary>
+    /// Throws a <see cref="DefaultInstanceException"/> if the (current) instance passed in is the default.
+    /// </summary>
+    /// <remarks>
+    /// This method should be called within a <see langword="struct"/> instancep property or method on the
+    /// current instance (<see langword="this"/>).
+    /// </remarks>
+    /// <typeparam name="TStruct"></typeparam>
+    /// <param name="_"></param>
+    /// <param name="instance"></param>
+    /// <param name="message"></param>
+    /// <exception cref="DefaultInstanceException">The instance passed in was default.</exception>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void IfCurrentInstanceDefault<TStruct>(
+        this IDefaultOrUnnamedThrower _, TStruct instance, string? message = null)
+        where TStruct : struct, IDefaultableStruct
+    {
+        if (instance.IsDefault)
+        {
+            if (message is null) throw new DefaultInstanceException();
+            else throw new DefaultInstanceException(message);
+        }
+    }
+
+    /// <summary>
     /// Throws a <see cref="StructArgumentDefaultException"/> if the argument value passed in is the default
     /// value of type <typeparamref name="TStruct"/>.
     /// </summary>
